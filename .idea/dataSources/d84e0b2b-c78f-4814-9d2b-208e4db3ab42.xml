@@ -876,5 +876,41 @@
       <ObjectGrants>ALL PRIVILEGES|db\_user
 </ObjectGrants>
     </user>
+    <table id="277" parent="2" name="users"/>
+    <column id="278" parent="277" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="279" parent="277" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="280" parent="277" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="281" parent="277" name="surname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="282" parent="277" name="password">
+      <Position>5</Position>
+      <DataType>varchar(1000)|0s</DataType>
+    </column>
+    <column id="283" parent="277" name="updated_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="284" parent="277" name="created_at">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <key id="285" parent="277" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

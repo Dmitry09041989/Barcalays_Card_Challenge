@@ -18,7 +18,13 @@
         <a class="p-2 text-white" href="#">Support</a>
         <a class="p-2 text-white" href="{{ route('about') }}">About</a>
     </nav>
-    <a class="btn btn-outline-warning fw-bold" href="{{ route('register') }}">Sign up</a>
+    @guest
+        <a class="btn btn-outline-warning fw-bold" href="{{ route('register') }}">Sign up</a>
+        <a class="btn btn-outline-warning fw-bold mx-2" href="{{ route('sign_in') }}">Log-in</a>
+    @endguest
+    @auth
+        <a class="btn btn-outline-warning fw-bold" href="{{ route('home') }}">Logout</a>
+    @endauth
 </header>
 
 {{--main content--}}

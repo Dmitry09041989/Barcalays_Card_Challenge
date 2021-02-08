@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\MainController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('home');
 
 Route::get('/about', [\App\Http\Controllers\MainController::class, 'about'])->name('about');
 
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/sign_in_page', [\App\Http\Controllers\RegisterController::class, 'sign_in'])->name('sign_in');
+
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'register'])->name('register');
-Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'post_register']);
+Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store']);
+
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
+Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticated']);
 
 //Route::get('/about/{id}/{name}', function ($id, $name) {
 //    return view('about');

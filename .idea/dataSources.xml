@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="d84e0b2b-c78f-4814-9d2b-208e4db3ab42">
+    <data-source source="LOCAL" name="@localhost" uuid="49bcf132-1e9b-4e09-9218-d9a121af770a">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
-      <vm-env>
-        <property name="LIBMYSQL_ENABLE_CLEARTEXT_PLUGIN" value="1" />
-      </vm-env>
-      <driver-properties>
-        <property name="authenticationPlugins" value="com.mysql.cj.protocol.a.authentication.MysqlClearPasswordPlugin" />
-      </driver-properties>
     </data-source>
   </component>
 </project>
