@@ -20,13 +20,18 @@ Route::get('/about', [\App\Http\Controllers\MainController::class, 'about'])->na
 
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/sign_in_page', [\App\Http\Controllers\RegisterController::class, 'sign_in'])->name('sign_in');
+//Route::get('/sign_in_page', [\App\Http\Controllers\RegisterController::class, 'sign_in'])->name('sign_in');
 
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'register'])->name('register');
 Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store']);
 
-Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
-Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticated']);
+Route::get('/sign_in_page', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
+Route::post('/sign_in_page', [\App\Http\Controllers\LoginController::class, 'authenticated']);
+
+
+//testing bcc code
+Route::get('/pay_one', [\App\Http\Controllers\PaymentsController::class, 'pay1'])->name('p1');
+Route::get('/pay_two', [\App\Http\Controllers\PaymentsController::class, 'pay2'])->name('p2');
 
 //Route::get('/about/{id}/{name}', function ($id, $name) {
 //    return view('about');

@@ -1,8 +1,13 @@
 @extends('layouts.main_layout')
-@section('title') Register @endsection
+@section('title') Sign-in @endsection
 @section('main_content')
 
     <div class=" w-50 mx-auto">
+        @if(session('status'))
+            <div class="text-danger ">
+                {{ session('status') }}
+            </div>
+        @endif
         <form action="{{ route('login') }}" method="post">
             @csrf
             <div class="mb-3">
