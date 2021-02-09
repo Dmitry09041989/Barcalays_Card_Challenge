@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('home');
-
-
+Route::get('/services', [\App\Http\Controllers\MainController::class, 'services'])->name('services');
+Route::get('/products', [\App\Http\Controllers\MainController::class, 'products'])->name('products');
 Route::get('/about', [\App\Http\Controllers\MainController::class, 'about'])->name('about');
 
 
-Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'register'])->name('register');
@@ -33,10 +33,12 @@ Route::post('/sign_in_page', [\App\Http\Controllers\LoginController::class, 'aut
 
 Route::post('/logout', [\App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
 
+Route::get('/book', [\App\Http\Controllers\BookingController::class, 'book'])->name('book')->middleware('auth');
+
 
 //testing bcc code
-Route::get('/pay_one', [\App\Http\Controllers\PaymentsController::class, 'pay1'])->name('p1');
-Route::get('/pay_two', [\App\Http\Controllers\PaymentsController::class, 'pay2'])->name('p2');
+Route::get('/pay_one', [\App\Http\Controllers\PaymentController::class, 'pay1'])->name('p1')->middleware('auth');
+Route::post('/pay_two', [\App\Http\Controllers\PaymentController::class, 'pay2'])->name('p2')->middleware('auth');
 
 //Route::get('/about/{id}/{name}', function ($id, $name) {
 //    return view('about');

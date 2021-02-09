@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('county');
             $table->string('postal_code');
             $table->string('password');
+            $table->integer('admin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

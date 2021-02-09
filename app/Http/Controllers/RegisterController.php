@@ -24,6 +24,10 @@ class RegisterController extends Controller
             $this->validate($request, [
                 'name' => ['required', 'min:3', 'max:255'],
                 'surname' => ['required', 'min:3', 'max:255'],
+                'address' => ['required', 'min:3', 'max:255'],
+                'city' => ['required', 'min:3', 'max:255'],
+                'county' => ['required', 'min:3', 'max:255'],
+                'postcode' => ['required', 'min:6', 'max:7'],
                 'email' => ['required', 'email', 'max:255'],
                 'password' => ['required', 'min:8', 'confirmed'],
             ]);
@@ -34,6 +38,10 @@ class RegisterController extends Controller
             'email'=>$request->email,
             'name'=>$request->name,
             'surname'=>$request->surname,
+            'address'=>$request->address,
+            'city'=>$request->city,
+            'county'=>$request->county,
+            'postal_code'=>$request->postcode,
             'password'=>Hash::make($request->password),
         ]);
 

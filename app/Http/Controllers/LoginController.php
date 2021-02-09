@@ -23,7 +23,11 @@ class LoginController extends Controller
             return back()->with('status', 'Invalid email or password');
         }
 
-        return redirect()->route('dashboard');
+//        if(auth()->attempt($request->only('email', 'password', 'admin==1'))){
+//            return back()->with('status', 'Invalid email or password');
+//        }
+
+        return redirect()->route('services');
 
     }
 }

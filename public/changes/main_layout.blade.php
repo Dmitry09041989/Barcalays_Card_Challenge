@@ -15,12 +15,11 @@
     <div class="w-25">
         <img id="logo" class="img-fluid w-25" src="/images/logo.png" alt="logo" >
     </div>
-    <p class="h5 my-0 me-md-auto fw-normal">Shear-locks Combs</p>
+    <p class="h1 my-0 me-md-auto fw-normal"></p>
     <nav class="my-2 my-md-0 me-md-3 ">
         <a class="p-2 text-white" href="/">Home</a>
-        <a class="p-2 text-white" href="{{ route('services') }}">Services</a>
-        <a class="p-2 text-white" href="{{ route('products') }}">Products</a>
-        <a class="p-2 text-white" href="{{ route('p1') }}">Pay Test</a>
+        <a class="p-2 text-white" href="#">Enterprise</a>
+        <a class="p-2 text-white" href="#">Support</a>
         <a class="p-2 text-white" href="{{ route('about') }}">About</a>
     </nav>
     @guest
@@ -28,10 +27,7 @@
         <a class="btn btn-outline-primary fw-bold mx-2" href="{{ route('login') }}">Log-in</a>
     @endguest
     @auth
-        <form action="{{ route('logout') }}" method="post">
-            @csrf
-            <button type="submit" class="btn btn-outline-primary fw-bold ">Logout</button>
-        </form>
+        <a class="btn btn-outline-primary fw-bold " href="{{ route('home') }}">Logout</a>
         <a class="btn btn-outline-primary fw-bold mx-2" href="{{ route('home') }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                 <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
             </svg> Checkout</a>
@@ -41,14 +37,14 @@
 
 {{--main content--}}
 
-<main class="">
-    <div class="container">@yield('main_content')</div>
+<main class="cheese">
+    <div id="test" class="container">@yield('main_content')</div>
 </main>
 
 
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row align-content-between">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top text-center">
+        <div class="row">
             <div class="col-4 col-md">
                 <div>
                     <a class="btn btn-primary fw-bold mx-2">
@@ -73,7 +69,7 @@
 
             </div>
             <div class="col-8 col-md">
-                <small class="h4 d-block mb-3 text-muted">Copyright Shears-Locks Combs.</small>
+                <small class="h4 d-block mb-3 text-muted">Copyright Shear-Locks Combs.</small>
             </div>
 
         </div>
