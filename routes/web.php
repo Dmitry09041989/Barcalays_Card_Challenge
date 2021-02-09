@@ -16,17 +16,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('home');
 
+
 Route::get('/about', [\App\Http\Controllers\MainController::class, 'about'])->name('about');
+
 
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
-//Route::get('/sign_in_page', [\App\Http\Controllers\RegisterController::class, 'sign_in'])->name('sign_in');
 
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'register'])->name('register');
 Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store']);
 
+
 Route::get('/sign_in_page', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
 Route::post('/sign_in_page', [\App\Http\Controllers\LoginController::class, 'authenticated']);
+
+
+Route::post('/logout', [\App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
 
 
 //testing bcc code

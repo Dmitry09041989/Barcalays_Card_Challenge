@@ -9,8 +9,8 @@
 	$currency = $_POST['currency'];
 	$signed_date_time = $_POST['signed_date_time'];
 	$access_key = $_POST['access_key'];
-	$profile_id = $_POST['profile_id'];
-	$signed_field_names = $_POST['signed_field_names'];
+	$profile_id = $_POST['profile_id']; // 0493609F-8654-4C25-96FA-DAA1CC5FC298
+    $signed_field_names = $_POST['signed_field_names'];
 	$unsigned_field_names = $_POST['unsigned_field_names'];
 	$bill_to_address_city = $_POST['bill_to_address_city'];
 	$bill_to_address_country = $_POST['bill_to_address_country'];
